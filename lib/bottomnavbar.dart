@@ -43,6 +43,13 @@ class _BottomNavBarState extends State<BottomNavBar> {
         ),
       ),
       bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.deepPurple,
+        selectedItemColor: Colors.white,
+        unselectedItemColor: Colors.grey,
+        mouseCursor: SystemMouseCursors.grab,
+        selectedIconTheme: IconThemeData(color: Colors.white, size: 40.0),
+        selectedLabelStyle: TextStyle(fontWeight: FontWeight.bold),
+        // type: BottomNavigationBarType.shifting,
         items: <BottomNavigationBarItem>[
           BottomNavigationBarItem(icon: Icon(Icons.person), label: 'Account'),
           BottomNavigationBarItem(icon: Icon(Icons.chat), label: 'Chat'),
