@@ -1,6 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, avoid_print, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
+import 'package:flutter_navigation/bottomnavbar.dart';
 
 class NavDrawer extends StatelessWidget {
   @override
@@ -14,7 +15,10 @@ class NavDrawer extends StatelessWidget {
           drawerHeader(context),
           //draweritem
           drawerItem(Icons.folder, 'Files', () {
-            print('Menekan File');
+            Route myRoute = MaterialPageRoute(
+              builder: (context) => BottomNavBar(),
+            );
+            Navigator.push(context, myRoute);
           }),
           drawerItem(Icons.share, 'Share', () {
             print('Menekan Share');
